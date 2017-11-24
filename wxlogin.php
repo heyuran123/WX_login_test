@@ -4,13 +4,13 @@
  * @Author: yuran
  * @Date:   2017-11-24 09:55:21
  * @Last Modified by:   yuran
- * @Last Modified time: 2017-11-24 09:57:35
+ * @Last Modified time: 2017-11-24 10:23:16
  */
 $code = $_GET['code'];
 $state = $_GET['state'];
 //换成自己的接口信息
-$appid = '1';
-$appsecret = '562589cd923362e0b196d5617fbafc73';
+$appid = 'wx534200b90641e999';
+$appsecret = '787bd13e9a93c2eb04b9abc1473ff61b';
 if (empty($code)) $this->error('授权失败');
 $token_url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$appid.'&secret='.$appsecret.'&code='.$code.'&grant_type=authorization_code';
 $token = json_decode(file_get_contents($token_url));
