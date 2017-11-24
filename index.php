@@ -4,6 +4,10 @@
  * @Author: yuran
  * @Date:   2017-11-23 17:13:16
  * @Last Modified by:   yuran
- * @Last Modified time: 2017-11-23 17:13:34
+ * @Last Modified time: 2017-11-24 09:55:07
  */
-echo 'hello centos 7 php';
+$appid = '1';
+
+$url = "https://open.weixin.qq.com/connect/qrconnect?appid=$appid&redirect_uri=http://www.wxlogin.com/wxlogin.php&response_type=code&scope=snsapi_login&state=1&connect_redirect=1#wechat_redirect";
+
+header('location:'.$url);
